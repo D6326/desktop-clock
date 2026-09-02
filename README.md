@@ -35,7 +35,7 @@
 ## 快速开始
 
 ```bat
-git clone https://github.com/<your-name>/desktop-clock.git
+git clone https://github.com/D6326/desktop-clock.git
 cd desktop-clock
 
 pip install -r requirements.txt
