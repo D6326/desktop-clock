@@ -1,5 +1,7 @@
 {
   "font_size": 12,
   "color": "#cccccc",
-  "transparent": true
+  "transparent": true,
+  "auto_scale": true,
+  "always_on_top": true
 }

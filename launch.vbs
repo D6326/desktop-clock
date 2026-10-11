@@ -1,5 +1,9 @@
 Set ws = CreateObject("WScript.Shell")
-' NOTE: This is a reference template with a placeholder path.
-' For actual startup, use install_startup.bat which generates
-' DesktopClock.vbs with the correct path dynamically via %~dp0.
-ws.Run "pythonw.exe ""<REPLACE_WITH_YOUR_PATH>\desktop_clock.py""", 0
+Set fso = CreateObject("Scripting.FileSystemObject")
+' NOTE: Reference launcher. Resolves the script's own directory so the
+' folder can be moved or cloned anywhere without editing paths.
+' For auto-start registration use install_startup.bat instead
+' (it writes DesktopClock.vbs to shell:startup pointing at the
+' current location).
+dir = fso.GetParentFolderName(WScript.ScriptFullName)
+ws.Run "pythonw.exe """ & dir & "\desktop_clock.py""", 0
